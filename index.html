@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteamTail Studios</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #b7ff00;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    nav a:hover {
+      color: #b7ff00;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #b7ff00;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #b7ff00;
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .button:hover {
+      transform: scale(1.04);
+    }
+
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">STEAM<span>TAIL</span></div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>STEAM<span>TAIL</span> STUDIOS</h1>
+      <p>Creative. Digital. Gaming.</p>
+      <a class="button" href="#about">Explore SteamTail</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About SteamTail Studios</h2>
+    <p>
+      Welcome to SteamTail Studios — a creative space built around
+      gaming, digital creativity, community, and original ideas.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>What We Do</h2>
+    <p>
+      More coming soon. This section can showcase your services,
+      projects, creations, and everything SteamTail Studios has to offer.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p>
+      Interested in SteamTail Studios? Contact us and stay connected.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 SteamTail Studios. All rights reserved.
+  </footer>
+
+</body>
+</html>
