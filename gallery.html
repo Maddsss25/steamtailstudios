@@ -1,0 +1,210 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Steam Tail Studios</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #080808;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header h2 {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #7D00FF;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff7a00;
+    }
+
+    .hero {
+      padding: 80px 20px 50px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #ff7a00;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .gallery {
+      padding: 50px 8% 80px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .gallery-card h2 {
+      color: #7D00FF;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-card p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .coming-soon {
+      border: 1px dashed #7D00FF;
+      padding: 45px 20px;
+      color: #aaa;
+    }
+
+    .back-button {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #7D00FF;
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 5px;
+    }
+
+    .button:hover {
+      transform: scale(1.04);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Steam Tail Studios</h2>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>Our <span>Gallery</span></h1>
+
+    <p>
+      Explore creations from Steam Tail Studios, including custom
+      projects, laser work, CNC creations, leather patches, and more.
+    </p>
+
+  </section>
+
+
+  <section class="gallery">
+
+    <div class="gallery-card coming-soon">
+      <h2>Gallery Coming Soon</h2>
+
+      <p>
+        We're preparing our collection of custom creations.
+        Check back soon to see our latest projects.
+      </p>
+    </div>
+
+  </section>
+
+
+  <div class="back-button">
+
+    <a class="button" href="services.html">
+      View Our Services
+    </a>
+
+    <a class="button" href="index.html">
+      Back to Steam Tail Studios
+    </a>
+
+  </div>
+
+
+  <footer>
+    <div>© 2026 Steam Tail Studios. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
+```
