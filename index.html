@@ -3,29 +3,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Steam Tail Studios LLC | Where Creativity Finds Its Wild Side</title>
+  <meta name="description" content="Steam Tail Studios LLC brings creative ideas to life through laser engraving, CNC routing, 3D printing, leather patches, and custom designs.">
+  <meta name="theme-color" content="#090909">
 
-  <meta name="description" content="Steam Tail Studios LLC brings creative ideas to life through custom laser engraving, CNC projects, 3D printing, and personalized designs.">
-
-  <meta name="theme-color" content="#080808">
-
-  <link rel="icon" type="image/jpeg" href="IMG_4309.jpeg">
+  <link rel="icon" type="image/png" href="steam-tail-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --black: #080808;
-      --dark: #111111;
-      --card: #151515;
-      --orange: #ff7a00;
-      --purple: #7D00FF;
-      --white: #ffffff;
-      --muted: #aaaaaa;
-      --border: #292929;
+      --black: #090909;
+      --panel: #111112;
+      --panel-light: #19191c;
+      --orange: #ff7617;
+      --orange-light: #ffb36b;
+      --violet: #a855f7;
+      --violet-bright: #d6a0ff;
+      --silver: #d9d9df;
+      --white: #f8f7fa;
+      --muted: #b4b1ba;
+      --border: #383238;
     }
 
     * {
@@ -36,20 +37,15 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 95px;
+      scroll-padding-top: 90px;
     }
 
     body {
       background: var(--black);
       color: var(--white);
       font-family: "Barlow", sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     img {
@@ -57,236 +53,269 @@
       max-width: 100%;
     }
 
-    button,
     a {
-      -webkit-tap-highlight-color: transparent;
+      color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: min(1160px, 90%);
+      width: min(1160px, 91%);
       margin: 0 auto;
     }
 
-    .accent {
-      color: var(--orange);
+    .chrome {
+      color: var(--silver);
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #b6b6c0 22%,
+        #f8f8ff 38%,
+        #777780 52%,
+        #f4f4fa 66%,
+        #a1a1aa 80%,
+        #ffffff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 1px 0 rgba(255, 118, 23, .38));
     }
 
-    .purple {
-      color: var(--purple);
+    .orange {
+      color: var(--orange);
     }
 
     .eyebrow {
-      color: var(--orange);
-      font-size: 0.8rem;
+      color: var(--orange-light);
+      font-size: .78rem;
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
-    .section-heading {
-      font-size: clamp(2rem, 5vw, 3.3rem);
-      line-height: 1.1;
-      font-weight: 900;
+    .heading {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.18;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .section-intro {
-      max-width: 690px;
+    .intro {
       color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 38px;
       font-size: 1.08rem;
-      margin-bottom: 42px;
     }
 
     .button {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      gap: 10px;
+      align-items: center;
+      padding: 13px 23px;
       min-height: 48px;
-      padding: 13px 24px;
-      border: 2px solid var(--purple);
-      border-radius: 5px;
-      background: var(--purple);
-      color: var(--white);
-      font-family: inherit;
-      font-size: 0.95rem;
+      border: 1px solid var(--violet);
+      border-radius: 4px;
+      background: linear-gradient(135deg, #8b35d7, #5520a4 55%, #9d46ed);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(168, 85, 247, .23);
       font-weight: 800;
-      letter-spacing: 0.8px;
+      font-size: .9rem;
+      letter-spacing: .8px;
       text-transform: uppercase;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: .22s ease;
     }
 
     .button:hover {
       transform: translateY(-3px);
-      background: #6500d1;
-      border-color: #6500d1;
+      box-shadow: 0 0 28px rgba(168, 85, 247, .6);
+      border-color: var(--violet-bright);
     }
 
-    .button-outline {
-      background: transparent;
+    .button.secondary {
+      background: rgba(8, 8, 10, .72);
       border-color: var(--orange);
-      color: var(--white);
+      box-shadow: 0 0 16px rgba(255, 118, 23, .12);
     }
 
-    .button-outline:hover {
-      background: var(--orange);
-      border-color: var(--orange);
-      color: var(--black);
+    .button.secondary:hover {
+      background: rgba(255, 118, 23, .14);
+      box-shadow: 0 0 22px rgba(255, 118, 23, .28);
     }
 
-    /* HEADER */
+    /* NAVIGATION */
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(8, 8, 8, 0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
+      z-index: 100;
+      background: rgba(7, 7, 9, .94);
+      border-bottom: 1px solid rgba(168, 85, 247, .34);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, .55);
+      backdrop-filter: blur(14px);
     }
 
-    .nav-container {
-      min-height: 78px;
+    .nav {
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 24px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      min-width: 0;
+      flex-shrink: 0;
     }
 
     .brand img {
-      width: 54px;
-      height: 54px;
+      width: 58px;
+      height: 58px;
       object-fit: contain;
-      border-radius: 5px;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 9px rgba(255, 118, 23, .25));
     }
 
-    .brand-name {
-      font-size: 1.08rem;
+    .brand-title {
+      font-family: "Cinzel", serif;
+      font-size: .95rem;
       font-weight: 900;
-      line-height: 1.15;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      line-height: 1.3;
+      letter-spacing: .7px;
     }
 
     .brand-subtitle {
       display: block;
-      color: var(--muted);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1.8px;
-      margin-top: 4px;
+      color: var(--orange-light);
+      font-family: "Barlow", sans-serif;
+      font-size: .66rem;
+      letter-spacing: 2px;
+      margin-top: 3px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 22px;
       list-style: none;
     }
 
     .nav-links a {
-      color: #dddddd;
-      font-size: 0.9rem;
+      color: #dedbe3;
+      font-size: .9rem;
       font-weight: 700;
-      transition: color 0.2s ease;
+      transition: color .2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--orange);
+      color: var(--violet-bright);
+      text-shadow: 0 0 12px rgba(168, 85, 247, .6);
     }
 
     .nav-links .nav-contact {
-      padding: 10px 16px;
-      background: var(--purple);
+      padding: 9px 14px;
+      border: 1px solid var(--violet);
       border-radius: 4px;
-      color: var(--white);
+      background: rgba(125, 40, 195, .23);
     }
 
-    .nav-links .nav-contact:hover {
-      background: #6500d1;
-      color: var(--white);
-    }
-
-    /* HERO */
+    /* HERO: CAR BACKGROUND */
 
     .hero {
       position: relative;
-      min-height: 620px;
+      min-height: 700px;
       display: flex;
       align-items: center;
       text-align: center;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(5, 5, 8, .77),
+          rgba(5, 5, 8, .43),
+          rgba(5, 5, 8, .7)
+        ),
+        linear-gradient(
+          0deg,
+          #090909 0%,
+          rgba(9, 9, 9, .05) 35%,
+          rgba(9, 9, 9, .14) 75%,
+          #090909 100%
+        ),
+        url("steam-tail-car.png");
+      background-size: cover;
+      background-position: center 57%;
+      border-bottom: 1px solid rgba(168, 85, 247, .35);
       overflow: hidden;
-      background:
-        radial-gradient(ellipse at 50% 35%, rgba(125, 0, 255, 0.16), transparent 52%),
-        radial-gradient(ellipse at 10% 85%, rgba(255, 122, 0, 0.10), transparent 40%),
-        var(--black);
     }
 
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       inset: 0;
       pointer-events: none;
-      opacity: 0.18;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, black, transparent 95%);
+      background: radial-gradient(
+        ellipse at 50% 50%,
+        transparent 20%,
+        rgba(0, 0, 0, .32) 100%
+      );
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      width: min(850px, 100%);
-      margin: 0 auto;
-      padding: 80px 0 90px;
+      width: 100%;
+      padding: 75px 0 95px;
     }
 
     .hero-logo {
-      width: min(270px, 65vw);
-      max-height: 270px;
+      width: clamp(150px, 20vw, 230px);
+      aspect-ratio: 1;
       object-fit: contain;
-      margin: 0 auto 28px;
-      filter: drop-shadow(0 0 24px rgba(125, 0, 255, 0.2));
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      filter:
+        drop-shadow(0 0 15px rgba(255, 118, 23, .38))
+        drop-shadow(0 0 24px rgba(168, 85, 247, .2));
     }
 
     .hero-label {
-      color: var(--orange);
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 4px;
+      color: var(--orange-light);
       text-transform: uppercase;
-      margin-bottom: 14px;
+      letter-spacing: 5px;
+      font-weight: 800;
+      font-size: .8rem;
+      margin-bottom: 15px;
     }
 
-    .hero-tagline {
-      max-width: 780px;
-      margin: 0 auto 20px;
-      font-size: clamp(2.1rem, 6vw, 4.5rem);
-      line-height: 1.03;
+    .hero h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.2rem, 5.8vw, 4.8rem);
       font-weight: 900;
-      letter-spacing: -1.5px;
+      line-height: 1.12;
+      max-width: 950px;
+      margin: 0 auto 22px;
+      text-shadow: 0 4px 25px rgba(0, 0, 0, .75);
     }
 
-    .hero-tagline .wild {
-      color: var(--orange);
+    .hero h1 span {
+      display: block;
+      color: var(--orange-light);
+      background: linear-gradient(180deg, #fff2df, #ffb15e 45%, #ff6815 80%, #a83205);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(255, 100, 12, .24));
     }
 
     .hero-description {
-      max-width: 650px;
+      max-width: 690px;
       margin: 0 auto 30px;
-      color: #c5c5c5;
+      color: #f1edf4;
       font-size: clamp(1rem, 2vw, 1.2rem);
+      text-shadow: 0 2px 10px #000;
     }
 
     .hero-buttons {
@@ -298,72 +327,78 @@
 
     /* ABOUT */
 
-    section {
+    section:not(.hero) {
       padding: 95px 0;
     }
 
     .about-section {
-      background: var(--dark);
-      border-top: 1px solid var(--border);
+      background:
+        linear-gradient(rgba(8, 8, 10, .83), rgba(8, 8, 10, .91)),
+        url("steam-tail-banner.png") center / cover;
       border-bottom: 1px solid var(--border);
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.1fr .9fr;
       align-items: center;
-      gap: 60px;
+      gap: 55px;
     }
 
-    .about-copy p {
-      color: #c1c1c1;
+    .about-copy p:not(.eyebrow) {
+      color: #d0ccd4;
       margin-bottom: 18px;
-      font-size: 1.05rem;
+      font-size: 1.04rem;
     }
 
-    .about-highlight {
-      padding: 32px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--purple);
-      border-radius: 7px;
+    .about-card {
+      padding: 30px;
+      background: rgba(14, 13, 17, .88);
+      border: 1px solid #51434f;
+      border-left: 3px solid var(--orange);
+      border-radius: 5px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, .38);
+      backdrop-filter: blur(8px);
     }
 
-    .about-highlight h3 {
-      font-size: 1.5rem;
-      line-height: 1.2;
-      margin-bottom: 14px;
-      text-transform: uppercase;
+    .about-card h3 {
+      font-family: "Cinzel", serif;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      margin-bottom: 13px;
     }
 
-    .about-highlight p {
+    .about-card > p {
       color: var(--muted);
     }
 
     .about-detail {
       display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-top: 22px;
+      gap: 13px;
+      margin-top: 21px;
     }
 
-    .detail-mark {
+    .detail-icon {
       color: var(--orange);
       font-size: 1.2rem;
-      font-weight: 900;
     }
 
     .about-detail strong {
       display: block;
-      margin-bottom: 3px;
     }
 
-    .about-detail span {
+    .about-detail span:last-child {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: .95rem;
     }
 
     /* SERVICES */
+
+    .services-section {
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(168, 85, 247, .09), transparent 40%),
+        var(--black);
+    }
 
     .services-grid {
       display: grid;
@@ -372,61 +407,72 @@
     }
 
     .service-card {
-      padding: 30px 26px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      padding: 30px 25px;
+      background: linear-gradient(145deg, #181719, #0f0f11);
+      border: 1px solid #39323d;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: .25s ease;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange), var(--violet), transparent);
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--purple);
+      transform: translateY(-5px);
+      border-color: var(--violet);
+      box-shadow: 0 0 25px rgba(168, 85, 247, .13);
     }
 
     .service-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 20px;
-      border: 1px solid rgba(255, 122, 0, 0.6);
-      border-radius: 6px;
-      color: var(--orange);
-      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 18px;
+      font-family: "Cinzel", serif;
+      font-size: 1.35rem;
       font-weight: 900;
+      background: linear-gradient(180deg, #fff, #8d8d9c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .service-card h3 {
-      font-size: 1.35rem;
-      line-height: 1.2;
+      font-family: "Cinzel", serif;
+      font-size: 1.17rem;
+      line-height: 1.4;
       margin-bottom: 12px;
-      text-transform: uppercase;
     }
 
     .service-card p {
       color: var(--muted);
-      font-size: 0.98rem;
+      font-size: .98rem;
     }
 
     .services-note {
-      margin-top: 30px;
-      padding: 22px 25px;
-      background: rgba(125, 0, 255, 0.08);
-      border: 1px solid rgba(125, 0, 255, 0.35);
-      border-radius: 6px;
-      color: #d0d0d0;
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: rgba(168, 85, 247, .07);
+      border: 1px solid rgba(168, 85, 247, .3);
+      border-radius: 5px;
+      color: #d6d0dd;
     }
 
     .services-note strong {
-      color: var(--white);
+      color: var(--orange-light);
     }
 
     /* WHY US */
 
     .why-section {
-      background: var(--dark);
+      background: linear-gradient(120deg, #121113, #0a090c 60%, #17101e);
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
@@ -438,34 +484,34 @@
     }
 
     .why-item {
-      padding: 10px 5px;
+      padding: 8px 4px;
+    }
+
+    .why-line {
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--violet));
+      box-shadow: 0 0 12px rgba(168, 85, 247, .3);
+      margin-bottom: 20px;
     }
 
     .why-item h3 {
-      font-size: 1.2rem;
+      font-family: "Cinzel", serif;
+      font-size: 1.15rem;
       margin-bottom: 10px;
-      text-transform: uppercase;
     }
 
     .why-item p {
       color: var(--muted);
     }
 
-    .why-line {
-      width: 48px;
-      height: 4px;
-      margin-bottom: 20px;
-      background: var(--orange);
-      border-radius: 2px;
-    }
-
-    /* SOCIAL MEDIA */
+    /* SOCIAL LINKS */
 
     .social-section {
       text-align: center;
     }
 
-    .social-section .section-intro {
+    .social-section .intro {
       margin-left: auto;
       margin-right: auto;
     }
@@ -473,70 +519,69 @@
     .social-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 17px;
       max-width: 850px;
       margin: 0 auto;
     }
 
     .social-card {
+      min-height: 150px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 13px;
-      min-height: 160px;
-      padding: 20px 12px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      gap: 12px;
+      padding: 20px 10px;
+      background: linear-gradient(145deg, #19171c, #0d0d0f);
+      border: 1px solid #39323d;
+      border-radius: 5px;
+      transition: .2s ease;
     }
 
     .social-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--orange);
+      transform: translateY(-4px);
+      border-color: var(--violet);
+      box-shadow: 0 0 20px rgba(168, 85, 247, .18);
     }
 
     .social-logo {
-      width: 48px;
-      height: 48px;
+      width: 43px;
+      height: 43px;
       object-fit: contain;
     }
 
     .social-card strong {
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
+      font-size: .95rem;
     }
 
     .social-card span {
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: .8rem;
     }
 
-    .snapchat-logo-wrap {
+    .snapchat-wrap {
+      width: 49px;
+      height: 49px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      width: 54px;
-      height: 54px;
-      background: #FFFC00;
-      border-radius: 12px;
+      align-items: center;
+      background: #fffc00;
+      border-radius: 10px;
     }
 
-    .snapchat-logo-wrap .social-logo {
-      width: 38px;
-      height: 38px;
+    .snapchat-wrap img {
+      width: 34px;
+      height: 34px;
     }
 
     /* CONTACT */
 
     .contact-section {
-      padding: 85px 0;
-      background:
-        radial-gradient(ellipse at 50% 100%, rgba(125, 0, 255, 0.16), transparent 60%),
-        #101010;
-      border-top: 1px solid var(--border);
       text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 110%, rgba(168, 85, 247, .19), transparent 58%),
+        linear-gradient(180deg, #101012, #080809);
+      border-top: 1px solid var(--border);
     }
 
     .contact-inner {
@@ -544,22 +589,23 @@
       margin: 0 auto;
     }
 
-    .contact-inner .section-intro {
+    .contact-inner .intro {
       margin-left: auto;
       margin-right: auto;
     }
 
     .contact-email {
       display: inline-block;
-      margin: 0 0 28px;
-      color: var(--orange);
+      margin: 0 0 27px;
+      color: var(--orange-light);
       font-size: clamp(1rem, 3vw, 1.35rem);
-      font-weight: 700;
+      font-weight: 800;
       overflow-wrap: anywhere;
+      text-shadow: 0 0 14px rgba(255, 118, 23, .18);
     }
 
     .contact-email:hover {
-      color: var(--white);
+      color: var(--violet-bright);
     }
 
     .contact-buttons {
@@ -571,10 +617,10 @@
 
     /* FOOTER */
 
-    .site-footer {
-      padding: 32px 0;
+    footer {
+      padding: 30px 0;
       background: #050505;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #302936;
     }
 
     .footer-content {
@@ -585,46 +631,45 @@
     }
 
     .footer-brand {
-      font-size: 0.95rem;
+      font-family: "Cinzel", serif;
+      font-size: .9rem;
       font-weight: 800;
-      text-transform: uppercase;
     }
 
     .footer-slogan {
       display: block;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-family: "Barlow", sans-serif;
+      font-size: .85rem;
       font-style: italic;
       font-weight: 400;
-      text-transform: none;
       margin-top: 3px;
     }
 
     .footer-copy {
-      color: #777777;
-      font-size: 0.85rem;
+      color: #8d8992;
+      font-size: .82rem;
       text-align: right;
     }
 
-    /* RESPONSIVE */
+    /* MOBILE */
 
     @media (max-width: 900px) {
-      .nav-container {
+      .nav {
         flex-direction: column;
-        justify-content: center;
-        gap: 12px;
-        padding: 14px 0;
+        padding: 12px 0;
+        gap: 13px;
       }
 
       .nav-links {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 12px 20px;
+        gap: 10px 17px;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 32px;
       }
 
       .services-grid {
@@ -636,75 +681,64 @@
         gap: 25px;
       }
 
-      .why-item {
-        padding: 0;
+      .hero {
+        min-height: 630px;
+        background-position: center;
       }
     }
 
     @media (max-width: 600px) {
-      section {
-        padding: 70px 0;
+      section:not(.hero) {
+        padding: 68px 0;
       }
 
       .container {
-        width: min(92%, 1160px);
+        width: 92%;
       }
 
       .brand img {
-        width: 45px;
-        height: 45px;
+        width: 48px;
+        height: 48px;
       }
 
-      .brand-name {
-        font-size: 0.95rem;
-      }
-
-      .brand-subtitle {
-        font-size: 0.62rem;
+      .brand-title {
+        font-size: .85rem;
       }
 
       .nav-links {
-        gap: 10px 16px;
+        gap: 9px 13px;
       }
 
       .nav-links a {
-        font-size: 0.82rem;
-      }
-
-      .nav-links .nav-contact {
-        padding: 7px 11px;
+        font-size: .8rem;
       }
 
       .hero {
-        min-height: auto;
+        min-height: 580px;
+        background-position: 56% center;
       }
 
       .hero-content {
-        padding: 65px 0 75px;
+        padding: 60px 0 75px;
       }
 
       .hero-logo {
-        width: min(220px, 62vw);
+        width: 155px;
       }
 
       .hero-label {
-        font-size: 0.72rem;
-        letter-spacing: 2.5px;
+        font-size: .68rem;
+        letter-spacing: 3px;
       }
 
-      .hero-tagline {
-        letter-spacing: -0.7px;
+      .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
       }
 
       .hero-buttons,
       .contact-buttons {
         flex-direction: column;
         align-items: stretch;
-      }
-
-      .hero-buttons .button,
-      .contact-buttons .button {
-        width: 100%;
       }
 
       .services-grid {
@@ -716,12 +750,8 @@
         gap: 12px;
       }
 
-      .social-card {
-        min-height: 145px;
-      }
-
-      .about-highlight {
-        padding: 25px 22px;
+      .about-card {
+        padding: 23px 20px;
       }
 
       .footer-content {
@@ -735,11 +765,14 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
       *,
       *::before,
       *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -747,14 +780,13 @@
 
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="container nav-container">
+    <div class="container nav">
 
       <a class="brand" href="#home" aria-label="Steam Tail Studios home">
-        <img src="IMG_4309.jpeg" alt="Steam Tail Studios logo">
-        <span class="brand-name">
-          Steam Tail Studios
+        <img src="steam-tail-logo.png" alt="Steam Tail Studios fox logo">
+        <span class="brand-title">
+          <span class="chrome">Steam Tail Studios</span>
           <span class="brand-subtitle">Creative Studio LLC</span>
         </span>
       </a>
@@ -783,26 +815,25 @@
 
           <img
             class="hero-logo"
-            src="IMG_4309.jpeg"
-            alt="Steam Tail Studios LLC"
+            src="steam-tail-logo.png"
+            alt="Steam Tail Studios emblem"
           >
 
           <p class="hero-label">Steam Tail Studios LLC</p>
 
-          <h1 class="hero-tagline">
+          <h1 class="chrome">
             Where Creativity Finds
-            <span class="wild">Its Wild Side.</span>
+            <span>Its Wild Side.</span>
           </h1>
 
           <p class="hero-description">
-            From custom creations to personalized projects, we bring unique
-            ideas to life with creativity, precision, and a little wild
-            imagination.
+            Custom creations. Original ideas. Industrial-inspired style.
+            Let's bring your vision to life.
           </p>
 
           <div class="hero-buttons">
             <a class="button" href="#services">Explore Our Services</a>
-            <a class="button button-outline" href="#contact">Let's Create Something</a>
+            <a class="button secondary" href="#contact">Let's Create Something</a>
           </div>
 
         </div>
@@ -814,16 +845,16 @@
       <div class="container about-grid">
 
         <div class="about-copy">
-          <p class="eyebrow">Get to Know Us</p>
+          <p class="eyebrow">The Story Behind the Studio</p>
 
-          <h2 class="section-heading">
-            Creativity With a <span class="accent">Purpose.</span>
+          <h2 class="heading chrome">
+            Creativity With a <span class="orange">Wild Side.</span>
           </h2>
 
           <p>
             Steam Tail Studios LLC is a creative studio built around
-            imagination, craftsmanship, and the excitement of turning an
-            idea into something real.
+            imagination, craftsmanship, and the excitement of turning
+            an idea into something real.
           </p>
 
           <p>
@@ -833,43 +864,46 @@
           </p>
 
           <p>
-            Whether you have a specific design in mind or just the beginning
-            of an idea, we're here to help explore the possibilities and
-            create something that feels uniquely yours.
+            Whether you have a finished design in mind or just the beginning
+            of an idea, we want to help explore the possibilities and create
+            something that feels uniquely yours.
           </p>
 
-          <a class="button button-outline" href="#contact">Tell Us Your Idea</a>
+          <a class="button secondary" href="#contact">Tell Us Your Idea</a>
         </div>
 
-        <div class="about-highlight">
-          <h3>Where Creativity Meets <span class="accent">Craftsmanship.</span></h3>
+        <div class="about-card">
+          <h3 class="chrome">
+            Where Creativity Meets <span class="orange">Craftsmanship.</span>
+          </h3>
 
           <p>
-            We believe the best projects start with an idea and grow through
-            collaboration, attention to detail, and creative problem-solving.
+            The best projects start with imagination. We enjoy bringing
+            creative thinking, thoughtful design, and hands-on making
+            together to explore what's possible.
           </p>
 
           <div class="about-detail">
-            <span class="detail-mark">✦</span>
+            <span class="detail-icon">✦</span>
             <div>
-              <strong>Made Around Your Vision</strong>
-              <span>Personalized concepts and custom project possibilities.</span>
+              <strong>Built Around Your Vision</strong>
+              <span>Personalized concepts and custom project ideas.</span>
             </div>
           </div>
 
           <div class="about-detail">
-            <span class="detail-mark">✦</span>
+            <span class="detail-icon">✦</span>
             <div>
               <strong>Creative Possibilities</strong>
-              <span>Explore different designs, materials, and approaches.</span>
+              <span>Different designs, materials, and approaches.</span>
             </div>
           </div>
 
           <div class="about-detail">
-            <span class="detail-mark">✦</span>
+            <span class="detail-icon">✦</span>
             <div>
-              <strong>Built on Creativity</strong>
-              <span>We enjoy helping turn unique ideas into tangible projects.</span>
+              <strong>Made to Stand Out</strong>
+              <span>Ideas that go beyond the ordinary.</span>
             </div>
           </div>
         </div>
@@ -878,98 +912,99 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services">
+    <section class="services-section" id="services">
       <div class="container">
 
         <p class="eyebrow">What We Do</p>
 
-        <h2 class="section-heading">
-          Explore Our <span class="accent">Services.</span>
+        <h2 class="heading chrome">
+          Our <span class="orange">Services.</span>
         </h2>
 
-        <p class="section-intro">
-          Every idea is different. We offer creative services and custom
-          project options to help bring your vision to life.
+        <p class="intro">
+          From personalized details to custom projects, we love helping
+          turn ideas into creations. Contact us to discuss your concept
+          and find out what options may work for your project.
         </p>
 
         <div class="services-grid">
 
           <article class="service-card">
             <span class="service-number">01</span>
-            <h3>Custom Laser Engraving</h3>
+            <h3 class="chrome">Laser Engraving</h3>
             <p>
-              Add a personal touch to gifts, keepsakes, signs, and other
-              projects with custom engraving and detailed designs.
+              Personalize gifts, keepsakes, signs, and more with custom
+              engraving and detailed designs.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">02</span>
-            <h3>CNC Projects</h3>
+            <h3 class="chrome">CNC Routing</h3>
             <p>
-              Explore custom-cut designs, shapes, and creative projects
-              developed around your concept and project needs.
+              Explore custom-cut shapes, designs, and projects developed
+              around your concept and project needs.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">03</span>
-            <h3>3D Printing</h3>
+            <h3 class="chrome">3D Printing</h3>
             <p>
               Turn digital ideas into physical creations with custom
-              3D-printed concepts, parts, and designs.
+              printed concepts, parts, and designs.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">04</span>
-            <h3>Leather Patches</h3>
+            <h3 class="chrome">Leather Patches</h3>
             <p>
-              Create a personalized look for hats, apparel, accessories,
-              and other projects with custom leather patch designs.
+              Give hats, apparel, and accessories a personalized look
+              with custom patch concepts.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">05</span>
-            <h3>Creative Design</h3>
+            <h3 class="chrome">Custom Design</h3>
             <p>
               Develop original artwork, personalized concepts, and
-              custom designs that help make your project stand out.
+              creative designs that help your project stand out.
             </p>
           </article>
 
           <article class="service-card">
             <span class="service-number">06</span>
-            <h3>Custom Creations</h3>
+            <h3 class="chrome">Custom Creations</h3>
             <p>
-              Have an idea that doesn't fit into one category? Let's
-              talk about your vision and explore what may be possible.
+              Have an idea that doesn't fit a category? Let's discuss
+              your vision and explore the possibilities.
             </p>
           </article>
 
         </div>
 
         <div class="services-note">
-          <strong>Have something specific in mind?</strong>
-          Every project is different. Contact us to discuss your idea,
-          materials, design, and project details.
+          <strong>Have a unique idea?</strong>
+          Each project is different. Reach out to discuss your design,
+          materials, and project details.
         </div>
 
       </div>
     </section>
 
-    <!-- WHY STEAM TAIL STUDIOS -->
+    <!-- WHY US -->
     <section class="why-section">
       <div class="container">
 
         <p class="eyebrow">The Steam Tail Difference</p>
 
-        <h2 class="section-heading">
-          More Than Just <span class="accent">a Design.</span>
+        <h2 class="heading chrome">
+          Made for the <span class="orange">Imaginative.</span>
         </h2>
 
-        <p class="section-intro">
+        <p class="intro">
           We love creative challenges, one-of-a-kind ideas, and projects
           that let personality shine through.
         </p>
@@ -978,16 +1013,16 @@
 
           <article class="why-item">
             <div class="why-line"></div>
-            <h3>Personalized Ideas</h3>
+            <h3 class="chrome">Your Vision</h3>
             <p>
               Your project should feel like yours. We want to understand
-              your vision and help you explore a design that fits it.
+              your idea and explore designs that fit your vision.
             </p>
           </article>
 
           <article class="why-item">
             <div class="why-line"></div>
-            <h3>Creative Thinking</h3>
+            <h3 class="chrome">Creative Thinking</h3>
             <p>
               From a simple concept to a more involved project, we enjoy
               finding creative ways to approach new ideas.
@@ -996,7 +1031,7 @@
 
           <article class="why-item">
             <div class="why-line"></div>
-            <h3>Room to Imagine</h3>
+            <h3 class="chrome">Think Different</h3>
             <p>
               Don't be afraid to think outside the box. The most
               interesting creations often start with an unusual idea.
@@ -1014,13 +1049,13 @@
 
         <p class="eyebrow">Follow Along</p>
 
-        <h2 class="section-heading">
-          Find Us <span class="accent">Online.</span>
+        <h2 class="heading chrome">
+          Find Us <span class="orange">Online.</span>
         </h2>
 
-        <p class="section-intro">
-          Follow Steam Tail Studios for creative projects, new ideas,
-          updates, and a closer look at what we're working on.
+        <p class="intro">
+          Follow Steam Tail Studios for creative projects, updates,
+          and a closer look at what we're working on.
         </p>
 
         <div class="social-grid">
@@ -1032,12 +1067,9 @@
             rel="noopener noreferrer"
             aria-label="Steam Tail Studios on TikTok"
           >
-            <img
-              class="social-logo"
-              src="https://cdn.simpleicons.org/tiktok/FFFFFF"
-              alt=""
-              loading="lazy"
-            >
+            <img class="social-logo"
+                 src="https://cdn.simpleicons.org/tiktok/FFFFFF"
+                 alt="">
             <strong>TikTok</strong>
             <span>Watch our content</span>
           </a>
@@ -1049,12 +1081,9 @@
             rel="noopener noreferrer"
             aria-label="Steam Tail Studios on Instagram"
           >
-            <img
-              class="social-logo"
-              src="https://cdn.simpleicons.org/instagram/E4405F"
-              alt=""
-              loading="lazy"
-            >
+            <img class="social-logo"
+                 src="https://cdn.simpleicons.org/instagram/E4405F"
+                 alt="">
             <strong>Instagram</strong>
             <span>See our creations</span>
           </a>
@@ -1064,12 +1093,9 @@
             href="#contact"
             aria-label="Contact Steam Tail Studios about Facebook"
           >
-            <img
-              class="social-logo"
-              src="https://cdn.simpleicons.org/facebook/1877F2"
-              alt=""
-              loading="lazy"
-            >
+            <img class="social-logo"
+                 src="https://cdn.simpleicons.org/facebook/1877F2"
+                 alt="">
             <strong>Facebook</strong>
             <span>Connect with us</span>
           </a>
@@ -1081,13 +1107,8 @@
             rel="noopener noreferrer"
             aria-label="Steam Tail Studios on Snapchat"
           >
-            <span class="snapchat-logo-wrap">
-              <img
-                class="social-logo"
-                src="https://cdn.simpleicons.org/snapchat/000000"
-                alt=""
-                loading="lazy"
-              >
+            <span class="snapchat-wrap">
+              <img src="https://cdn.simpleicons.org/snapchat/000000" alt="">
             </span>
             <strong>Snapchat</strong>
             <span>Follow our updates</span>
@@ -1101,33 +1122,26 @@
     <section class="contact-section" id="contact">
       <div class="container contact-inner">
 
-        <p class="eyebrow">Let's Make Something</p>
+        <p class="eyebrow">Start Something Creative</p>
 
-        <h2 class="section-heading">
-          Have an Idea? <span class="accent">Let's Talk.</span>
+        <h2 class="heading chrome">
+          Have an Idea? <span class="orange">Let's Talk.</span>
         </h2>
 
-        <p class="section-intro">
+        <p class="intro">
           Have a project in mind, want to ask a question, or just want to
           see what's possible? Reach out and tell us what you're imagining.
         </p>
 
-        <a
-          class="contact-email"
-          href="mailto:steamtailstudios@gmail.com"
-        >
+        <a class="contact-email" href="mailto:steamtailstudios@gmail.com">
           steamtailstudios@gmail.com
         </a>
 
         <div class="contact-buttons">
-          <a
-            class="button"
-            href="mailto:steamtailstudios@gmail.com?subject=Steam%20Tail%20Studios%20Project%20Inquiry"
-          >
+          <a class="button" href="mailto:steamtailstudios@gmail.com?subject=Steam%20Tail%20Studios%20Project%20Inquiry">
             Email Us
           </a>
-
-          <a class="button button-outline" href="gallery.html">
+          <a class="button secondary" href="gallery.html">
             View the Gallery
           </a>
         </div>
@@ -1137,11 +1151,10 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer>
     <div class="container footer-content">
 
-      <div class="footer-brand">
+      <div class="footer-brand chrome">
         Steam Tail Studios LLC
         <span class="footer-slogan">
           Where Creativity Finds Its Wild Side.
